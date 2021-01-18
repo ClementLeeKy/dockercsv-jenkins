@@ -2,8 +2,11 @@ node {
 
       checkout scm
 
-      stage ('Build & Run Docker Image') {
-            def image = docker.build("docker-csv", '.')
-            bat 'docker run --name csv-container image > output.csv' && echo "Container is running and produces a csv output"   
+      stage ('Build Docker Image') {
+            def image = docker.build("docker-csv", '.')   
+      }
+      
+      stage ('Run Docker Container') {
+            bat 'docker run docker-csv > output.csv'      
       }
 }
