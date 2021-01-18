@@ -7,7 +7,7 @@ node {
       }
       
       stage ('Run Docker Container') {
-            customWorkspace "c:\Users\z0048yrk\Desktop"
+            customWorkspace "c:\\Users\z0048yrk\Desktop"
             bat 'docker run -d docker-csv > output.csv'    
       }
 }
