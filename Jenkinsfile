@@ -1,5 +1,6 @@
 node {
-
+      
+      customWorkspace "c:\\Users\\z0048yrk\\Desktop"
       checkout scm  
       
       stage ('Build Docker Image') {
@@ -7,7 +8,6 @@ node {
       }
       
       stage ('Run Docker Container') {
-            customWorkspace "c:\\Users\\z0048yrk\\Desktop"
             bat 'docker run -d docker-csv > output.csv'    
       }
 }
