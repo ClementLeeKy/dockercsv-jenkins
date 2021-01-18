@@ -1,7 +1,12 @@
 node {
+      agent {
+         label {
+           label ""
+             customWorkspace "c:\\Users\\z0048yrk\\Desktop"
+        }
+      }
       
-      customWorkspace "c:\\Users\\z0048yrk\\Desktop"
-      checkout scm  
+      checkout scm
       
       stage ('Build Docker Image') {
             def image = docker.build("docker-csv", '.')   
