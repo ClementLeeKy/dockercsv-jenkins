@@ -1,6 +1,7 @@
 node {
 
-      checkout scm
+      checkout scm  
+      customWorkspace '/usr/Desktop'
 
       stage ('Build Docker Image') {
             def image = docker.build("docker-csv", '.')   
