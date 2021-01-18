@@ -7,6 +7,6 @@ node {
       }
       
       stage ('Run Docker Container') {
-            bat 'docker run docker-csv > output.csv'      
+            bat 'docker run docker-csv'    
       }
 }
