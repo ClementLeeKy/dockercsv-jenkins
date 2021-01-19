@@ -9,7 +9,8 @@ node {
             def image = docker.build("docker-csv", '.')   
       }
       
-      stage ('Push Docker Image') { 
+      stage ('Tag and Push Docker Image') { 
+            bat 'docker tag docker-csv localhost:5000/docker-csv'
             bat 'docker push localhost:5000/docker-csv'
       }
       
