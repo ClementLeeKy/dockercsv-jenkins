@@ -1,11 +1,4 @@
-node {
-      agent {
-         label {
-           label ""
-             customWorkspace "c:\\Users\\z0048yrk\\Desktop"
-        }
-      }
-      
+node {   
       checkout scm
       
       stage ('Build Docker Image') {
